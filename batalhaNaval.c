@@ -29,6 +29,17 @@ int tabuleiro[TAM][TAM] = {0}; // Inicializa tudo com 0 (água)
         tabuleiro[5 + i][7] = NAVIO;
     }
 
+    //NAVIOS DIAGONAIS
+    // Diagonal (linha e coluna aumentam) começando em (0,0)
+    for (i = 0; i < TAMANHO; i++) {
+        tabuleiro[0 + i][0 + i] = NAVIO;
+    }
+
+        // Diagonal (linha aumenta, coluna diminui) começando em (0,9)
+    for (i = 0; i < TAMANHO; i++) {
+        tabuleiro[0 + i][9 - i] = NAVIO;
+    }
+
     // Exibir tabuleiro
     for (i = 0; i < TAM; i++) {
         for (j = 0; j < TAM; j++) {
